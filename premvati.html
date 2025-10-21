@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>પ્રેમવતી ઉપહારગૃહ</title>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f9fafc;
+      margin: 0;
+      padding: 10px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .item-card {
+      background: #f5f7fa;
+      border-radius: 12px;
+      text-align: center;
+      padding: 12px;
+      transition: 0.3s;
+    }
+
+    .item-card:hover {
+      background: #e6f3ff;
+      transform: translateY(-2px);
+    }
+
+    .icon {
+      font-size: 24px;
+      color: #ff7043;
+      margin-bottom: 5px;
+    }
+
+    .item-card h3 {
+      font-size: 15px;
+      margin: 4px 0;
+    }
+
+    .item-card p {
+      margin: 3px 0;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .quantity {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    .quantity button {
+      background: #2196f3;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .quantity span {
+      margin: 0 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .total-section {
+      margin-top: 20px;
+      text-align: center;
+      background: #f0f8ff;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .total-section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .money-input {
+      margin: 10px 0;
+    }
+
+    .money-input input {
+      width: 80%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 10px;
+      background: #4caf50;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background: #43a047;
+    }
+
+    @media (max-width: 500px) {
+      .items-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .item-card h3 {
+        font-size: 14px;
+      }
+
+      .item-card p {
+        font-size: 13px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="color:red">પ્રેમવતી ઉપહારગૃહ</h1>
+
+    <div class="items-grid">
+      <div class="item-card" data-price="50">
+        <h3>Pav Bhaji</h3>
+        <p>₹50</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="item-card" data-price="20">
+        <h3>Vada Pav</h3>
+        <p>₹20</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="item-card" data-price="20">
+        <h3>Samosa</h3>
+        <p>₹20</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="item-card" data-price="20">
+        <h3>Papdi Lot</h3>
+        <p>₹20</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="item-card" data-price="50">
+        <h3>Sandwich</h3>
+        <p>₹50</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="item-card" data-price="60">
+        <h3>Manchurian</h3>
+        <p>₹60</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="item-card" data-price="30">
+        <h3>Live Dhokla</h3>
+        <p>₹30</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="item-card" data-price="30">
+        <h3>Kichdi</h3>
+        <p>₹30</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-section">
+      <h2>Total: ₹<span style="color:red" id="total">0</span></h2>
+
+      <div class="money-input">
+        <label for="money">User Given Amount:</label><br />
+        <input type="number" id="money" placeholder="Enter amount" />
+      </div>
+
+      <h3>Return Money: ₹<span style="color:green" id="return">0</span></h3>
+
+      <div class="buttons">
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll('.item-card');
+    const totalDisplay = document.getElementById('total');
+    const moneyInput = document.getElementById('money');
+    const returnDisplay = document.getElementById('return');
+    const resetBtn = document.getElementById('reset');
+
+    let total = 0;
+
+    items.forEach(item => {
+      const plus = item.querySelector('.plus');
+      const minus = item.querySelector('.minus');
+      const qtySpan = item.querySelector('.qty');
+      const price = parseInt(item.getAttribute('data-price'));
+
+      plus.addEventListener('click', () => {
+        let qty = parseInt(qtySpan.textContent);
+        qty++;
+        qtySpan.textContent = qty;
+        total += price;
+        totalDisplay.textContent = total;
+        updateReturn();
+      });
+
+      minus.addEventListener('click', () => {
+        let qty = parseInt(qtySpan.textContent);
+        if (qty > 0) {
+          qty--;
+          qtySpan.textContent = qty;
+          total -= price;
+          totalDisplay.textContent = total;
+          updateReturn();
+        }
+      });
+    });
+
+    moneyInput.addEventListener('input', updateReturn);
+
+    function updateReturn() {
+      const given = parseInt(moneyInput.value || 0);
+      const ret = given - total;
+      returnDisplay.textContent = ret >= 0 ? ret : 'Not enough money!';
+    }
+
+    resetBtn.addEventListener('click', () => {
+      total = 0;
+      totalDisplay.textContent = 0;
+      returnDisplay.textContent = 0;
+      moneyInput.value = '';
+      document.querySelectorAll('.qty').forEach(q => q.textContent = 0);
+    });
+  </script>
+</body>
+</html>
